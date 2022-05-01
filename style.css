@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+html {
+    /* background-color: pink; */
+    background-image: url('room.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-size: 100vh 100vw; */
+    background-size: cover;
+    /* background-size: contain; */
+    
+    height: 100%;
+    margin: 0;
+  }
+
+  h2{
+      font-size: 2.5rem;
+      /* margin-top: -0rem; */
+  }
