@@ -2,9 +2,9 @@
 html {
 
 
-    background: linear-gradient(-45deg, #ee7752, #ff8eb9, #98e3ff, #adfae8);
+    background: linear-gradient(-45deg, #ee7752, #ffc4db, #98e3ff, #adfae8, #fff1a1, #ffbc90);
 	background-size: 400% 400%;
-	animation: gradient 5s ease infinite;
+	animation: gradient 10s ease infinite;
 	height: 100vh;
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -12,11 +12,25 @@ html {
   }
 
 body{
-     margin: 0rem;
-     background-image: url('room.svg');
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+     /* margin: 0rem; */
+     /* background-image: url('room.svg');
     background-repeat: no-repeat;
     background-attachment: fixed;
+     background-size: cover; */
+}
+
+
+.base{
+    
+    margin: 0rem;
+     background-image: url('room.svg');
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
      background-size: cover;
+/* object-fit: cover; */
 }
 
   h2{
@@ -36,4 +50,28 @@ body{
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+
+
+.header {
+	/* font-family: Helvetica Neue, Helvetica, Arial, sans-serif; */
+	font-size: 3rem;
+	font-weight:  600;
+	letter-spacing: 2px;
+	text-align: center;
+	color: #f35626;
+	background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
 }
