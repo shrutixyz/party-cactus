@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.39/Tone.js" integrity="sha512-Zu1QIDG6ZacL9zSX9Ynyvdp45DP/FDTX40ci1RakZ6qvonbA+foQleFvqwa2lnsCE01P5QyXkj662EAwDFhrTw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ 
     <link rel="shortcut icon" href="cactus.svg" type="image/x-icon">
     <title>Party Cactus</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
     <style>
@@ -40,20 +42,26 @@
               <h1>hemlo</h1>
               <div style="display: flex; align-items: center; justify-content: end; flex-direction: column; bottom: 0; ">
                 <div style="z-index: -0;">
-                   <img class="img1" src="cactus.svg" alt="" ><br>
+                   <img class="img1" src="static/cactus.svg" alt="" ><br>
                 </div>
                <div style="margin-top: -3rem; z-index: 1;">
-                   <img src="pot.png" alt="" height="150rem" >
+                   <img src="static/pot.png" alt="" height="150rem" >
                </div>
                </div>
                <div>
-                 <img style="cursor: pointer;" src="mic.svg" alt="" height="100px">
+                 <img style="cursor: pointer;" src="static/mic.svg" alt="" height="100px">
                  <p style="margin-top: -1rem;">tap to speak</p>
+                 <button type="button" id="start_btn">Record</button>
+                 <button type="button" id="play_btn" disabled>Play</button>
+             
                </div>
                
             </div>
           </div>
         </div>
     
+
+        <script src="static/js/sound.js"></script>
+
 </body>
 </html>
