@@ -8,12 +8,27 @@ const player = new Tone.Player({
     
 });
 aakash.addEventListener("click", e => {
-    console.log("click")
+    // console.log("click")
     
-    const pitchShift = new Tone.PitchShift(4).toDestination();
-const filter = new Tone.Filter("G5").toDestination();
-// connect a node to the pitch shift and filter in parallel
-player.fan(pitchShift, filter);
+    // const pitchShift = new Tone.PitchShift(4).toDestination();
+    // const filter = new Tone.Filter("G5").toDestination();
+    // // connect a node to the pitch shift and filter in parallel
+    // player.fan(pitchShift, filter);
     // player.connect(feedbackDelay);
+
+
+
+    /*
+    *********************
+    *********************
+    */
+
+
+    const mic = new Tone.UserMedia();
+    mic.open().then(() => {
+        // promise resolves when input is available
+    });
+    
+    
 })
 
