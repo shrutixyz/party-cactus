@@ -10,11 +10,10 @@ const player = new Tone.Player({
 aakash.addEventListener("click", e => {
     console.log("click")
     
-    const filter = new Tone.Filter(400, 'lowpass').toDestination();
-    const feedbackDelay = new Tone.FeedbackDelay(0.125, 0.5).toDestination();
-    
-    // connect the player to the feedback delay and filter in parallel
-    player.connect(filter);
-    player.connect(feedbackDelay);
+    const pitchShift = new Tone.PitchShift(4).toDestination();
+const filter = new Tone.Filter("G5").toDestination();
+// connect a node to the pitch shift and filter in parallel
+player.fan(pitchShift, filter);
+    // player.connect(feedbackDelay);
 })
 
