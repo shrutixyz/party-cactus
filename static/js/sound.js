@@ -119,7 +119,7 @@ var playerbaamzi;
 // bind the interface
 const recBtn = document.getElementById("start_btn");
 const playBtn = document.getElementById("play_btn");
-
+const img1 = document.querySelector(".img1");
 
 recBtn.disabled = !Tone.UserMedia.supported;
 
@@ -154,16 +154,22 @@ playBtn.addEventListener("click", () => {
   if (playBtn.innerText == "Stop") {
     playerbaamzi.stop();
 
-    console.log("brrrrrrrrrrrrrrrrrrrrrrrr");
+    
 
     playBtn.innerText = "Play";
+    img1.classList.remove("animate")
+    // const pitchShift = new Tone.PitchShift(4).toDestination();
+    // const filter = new Tone.Filter("G5").toDestination();
+    // // connect a node to the pitch shift and filter in parallel
+    // playerbaamzi.fan(pitchShift, filter);
+    // playerbaamzi.connect(feedbackDelay);
+  } else {
+    playerbaamzi.start();
+    img1.classList.add("animate")
+    playBtn.innerText = "Stop";
     const pitchShift = new Tone.PitchShift(4).toDestination();
     const filter = new Tone.Filter("G5").toDestination();
     // connect a node to the pitch shift and filter in parallel
     playerbaamzi.fan(pitchShift, filter);
-    // playerbaamzi.connect(feedbackDelay);
-  } else {
-    playerbaamzi.start();
-    playBtn.innerText = "Stop";
   }
 });
